@@ -32,12 +32,22 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
-        FloatingActionButton fab = binding.fab;
+        FloatingActionButton fabNewChat = binding.fabNewChat;
+        FloatingActionButton fabLogOut = binding.fabLogOut;
 
-        fab.setOnClickListener(new View.OnClickListener() {
+
+        fabNewChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "This will eventually create a new chat", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        fabLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "This will eventually log you out", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
